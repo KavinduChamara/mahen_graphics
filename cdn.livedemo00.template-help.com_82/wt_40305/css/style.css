@@ -15,7 +15,8 @@ a:hover{text-decoration:underline}
 h1,h2,h3,h4,h5,h6{line-height:1.3em;color:#262626; font-family: 'Lora', serif; font-weight:bold; letter-spacing:-1px; margin-bottom:16px;}
 h1{font-size:45px;}
 h2{font-size:40px; letter-spacing:-2px;}
-h3{font-size:30px;} 
+h3{font-size:30px;
+text-align: center;} 
 h4{font-size:27px;}  
 h5{font-size:25px;}
 h6{font-size:22px;}
@@ -167,14 +168,14 @@ header h1 {
 }
 .sf-menu li {
 	float:			left;
-	background:url(../images/divider1.png) no-repeat right 28px;
+	background:url(../images/divider1.png) no-repeat right 20px;
 	position:		relative;
 }
 nav {
 	padding-left:5px;
 	z-index:99999;
 	height:102px;
-	background:url(../images/divider1.png) no-repeat 0 28px;
+	background:url(../images/divider1.png) no-repeat 0 20px;
 }
 
 .sf-menu a {
@@ -182,7 +183,7 @@ nav {
 	color:#eaecf0;
 	font-family: 'Lora', serif;
 	font-weight:bold;
-	font-size:20px;
+	font-size:14px;
 	line-height:24px;
 	padding:36px 31px 42px 35px;
 	text-transform:uppercase;

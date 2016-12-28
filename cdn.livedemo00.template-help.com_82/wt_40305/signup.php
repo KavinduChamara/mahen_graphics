@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from cdn.livedemo00.template-help.com:82/wt_40305/index-4.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 01 Nov 2016 11:52:15 GMT -->
 <head>
   	<title>Profile</title>
   	<meta charset="utf-8">
@@ -18,24 +17,14 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-1.7.1.min.js"></script>
     <script src="js/script.js"></script>
-<!--[if lt IE 8]>
-   <div style=' clear: both; text-align:center; position: relative;'>
-     <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-       <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
-    </a>
-  </div>
-<![endif]-->
-<!--[if lt IE 9]>
-	<script src="js/html5.js"></script>
-	<link rel="stylesheet" href="css/ie.css"> 
-<![endif]-->
+
 
 <style>
 
 form{
-    max-width: 4000px;
+    max-width: 500px;
     margin: 2% auto;
-    padding: 10px 20px;
+    padding: 10px 30px;
     background: #e4f0ff;
     border-radius: 20px;
 }
@@ -49,11 +38,13 @@ label{
 
 
 </head>
+ 
 <body id="page5">
 <div class="bg">
 <!--==============================header=================================-->
     <header>
-    	<div class="main">        	
+
+    	<div class="main" >        	
             <nav>
                 <ul class="sf-menu">
                     <li><a href="index-2.html">home</a></li>
@@ -78,7 +69,7 @@ label{
                     <li><a href="index-4.html">services</a></li>
                     <li><a href="index-5.html">creations</a></li>
                     <li><a href="index-6.html">mail</a></li>
-                    <li class="active"><a href="signin2.html">profile</a></li>
+                    <li class="active glyphicon glyphicon-user"><a href="signin2.html">profile</a></li>
                 </ul>
             </nav>            
             <div class="clear"></div>            
@@ -105,7 +96,8 @@ label{
             	<div class="wrapper">
                 	<form class="form-horizontal" action="" method="post">
 
-    <h3>SIGNUP</h3>
+
+    <h3><align ="centre">SIGNUP</h3>
 
     <div class="form-group">
         <label for="FirstName">First Name :</label>
@@ -165,7 +157,7 @@ label{
     <footer>
         <div class="main">
         <div class="foot-page1">
-        	<span>mahen graphics</span>&copy; 2012&nbsp; |&nbsp;  <a href="index-7.html">Privacy Policy</a>
+        	<span>mahen graphics</span><a href="index-7.html"></a>
             <div class="clear"></div>
         </div>
         <ul class="foot-menu">
@@ -183,7 +175,7 @@ label{
 </div>
 </body>
 
-<!-- Mirrored from cdn.livedemo00.template-help.com:82/wt_40305/index-4.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 01 Nov 2016 11:52:27 GMT -->
+
 </html>
 
 <?php
@@ -202,7 +194,7 @@ if ( isset( $_POST['insert'] ) ) {
 
     if($pswrd == $cnfpaswrd){
         $sql = "INSERT INTO user_details (FirstName, LastName, UID, Email, Address, Telephone) VALUES ('$fname', '$lname', '$uid', '$email', '$address', '$telno')";
-
+	$sql = "INSERT INTO user_id (UID, Password) VALUES ('$uid', '$pswrd')";
             if (mysqli_query($conn, $sql)) {
                 
                     $conn->close();

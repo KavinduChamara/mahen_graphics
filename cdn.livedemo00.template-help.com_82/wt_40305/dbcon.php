@@ -163,7 +163,7 @@ label{
     <footer>
         <div class="main">
         <div class="foot-page1">
-            <span>mahen graphics</span>&copy; 2012&nbsp; |&nbsp;  <a href="index-7.html">Privacy Policy</a>
+            <span>mahen graphics</span><a href="index-7.html"></a>
             <div class="clear"></div>
         </div>
         <ul class="foot-menu">
@@ -202,7 +202,9 @@ $saveuid=$_POST['inputuid'];
 $sql = "UPDATE user_details SET FirstName='$FirstName', LastName='$LastName', Email='$Email', Address='$Address', Telephone='$Telephone' WHERE UID='$saveuid'";
 
     if (mysqli_query($conn, $sql)) {
-        echo "Record updated successfully";
+        echo "<script>";
+        echo "alert('Profile Updated Successfully')";
+        echo "</script>";
     } 
     else {
         echo "Error updating record: " . mysqli_error($conn);
@@ -220,7 +222,9 @@ $saveuid=$_POST['inputuid'];
 $sql = "DELETE FROM user_details WHERE UID='$saveuid'";
 
     if (mysqli_query($conn, $sql)) {
-        echo "Record deleted successfully";
+        echo "<script>";
+        echo "alert('Profile Deleted Successfully')";
+        echo "</script>";
     } 
     else {
         echo "Error deleting record: " . mysqli_error($conn);
